@@ -1,30 +1,34 @@
-def binary_search(list, element):
+pos = -1
 
-    middle = 0
-    start = 0
-    end = len(list)
-    step = 0
+def search(list, n):
 
-    while(start<=end):
-        print("step", step, ":", str(list[start:end+1]))
+    l_bound = 0
+    u_bound = len(list) - 1
 
-        step = step + 1
-        midlle = (start + end) // 2
+    while l_bound <=  u_bound:
 
-        if element == list[middle]:
-            return middle
+        mid = (l_bound + u_bound) // 2
 
-        if element < list[middle]:
-            end = middle - 1
+        if list[mid] == n:
+            globals() ['pos'] = mid
+            return True
 
         else:
-            start = middle + 1
+            if list[mid] < n:
 
-    return - 1
+                l_bound = mid
+
+            else:
+
+                u_bound = mid
 
 
-mulist = [1, 2, 3, 4 , 5, 6, 7, 8, 9 ]
-target = 2
+list = [4, 7, 8, 12, 45, 99]
 
-binary_search(mulist, target)
+n = 45
 
+if search(list, n):
+    print('Found at', pos + 1)
+
+else:
+    print('Not found')

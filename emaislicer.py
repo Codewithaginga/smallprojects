@@ -12,5 +12,6 @@ def mail():
     print("Extension: ", extension)
 
 
-mail()
+while True:
+    mail()
 

@@ -37,6 +37,7 @@ while True:
     print('D. modulus')
     print('M. Mulptiplication')
     print('F. quit')
+    
     operate = input('Input your operator: ')
 
     if operate == "a" or "A":
