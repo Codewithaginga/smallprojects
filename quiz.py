@@ -35,7 +35,7 @@ quiz = {
 
 score = 0
 
-for k, value in quiz.items():
+for key, value in quiz.items():
     print(value['Question'])
     answer = input('Answer? ')
 
@@ -44,10 +44,17 @@ for k, value in quiz.items():
 
         score += 1
         print(f'your score is {score}')
+        print("")
+
 
     else:
         print("you can do better")
         print("The answer is: ", value['answer'])
         print(f'your score is {score}')
+        print("")
+
+
+print(f"you got {score} out of 7")
+print("your percentage is ", int(score / 7 *100),"%")
 
 
